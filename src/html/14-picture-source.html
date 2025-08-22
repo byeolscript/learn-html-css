@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <title>picture와 source 요소</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a><br />
+    <h1>picture와 source 요소</h1>
+    <h2>미디어 속성</h2>
+    <picture>
+      <!-- 뷰포트가 보여달라고 하는것에 크기가 커지거나 작아지면 설정한 값에 따라 변경됨 / web.dev 꼭 읽어보기!!!!-->
+      <source srcset="/src/assets/rwd/small-550.jpg 550w" media="(max-width: 500px)" />
+      <source srcset="/src/assets/rwd/medium-1024.jpg 1024w" media="(max-width: 768px)" />
+      <source srcset="/src/assets/rwd/large-1600.jpg 1600w" media="(max-width: 1280px)" />
+      <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+    </picture>
+    <hr />
+    <h2>webp 포맷</h2>
+    <picture>
+      <source sizes="50vw," srcset="/src/assets/logo/netflix@1x.webp, /src/assets/logo/netflix@2x.webp 2x" />
+      <img src="/src/assets/logo/netflix@1x.png" alt="NETFLIX" />
+    </picture>
+    <hr />
+    <h2>넷플릭스 로고</h2>
+    <picture>
+      <source srcset="/src/assets/logo/netflix@1x.png 1x, /src/assets/logo/netflix@2x.png 2x" />
+      <img src="/src/assets/logo/netflix@1x.png" alt="NETFLIX" />
+    </picture>
+    <hr />
+    <picture>
+      <!-- source 태그는 최근에 나온 태그 -->
+      <!-- /src/assets/logo/netflix@1x.png 1x 생략해도 됨 -->
+      <!--  pictue 안에 source 생략 가능 -->
+      <source srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x" />
+      <img src="/src/assets/rwd/image-src.png 1x" alt="" /><!-- 위에 사진을 적용 하지 못할때 png를 대체한다 폴백-->
+    </picture>
+
+    <hr />
+    <h2>이디야 배너</h2>
+    <picture>
+      <source srcset="/src/assets/rwd/banner-narrow.jpg" media="(orientation: portrait)" />
+      <img src="/src/assets/rwd/banner-wide.jpg" alt="" width="200" />
+    </picture>
+    <hr />
+  </body>
+</html>
