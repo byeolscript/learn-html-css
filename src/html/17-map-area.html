@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <title>map과 area 요소</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a><br />
+    <h1>map과 area 요소</h1>
+    <!-- Image Map img는 바로 body에 넣어서 사용하지 말고 <p>안에 넣어서 사용하기-->
+    <img src="/src/assets/sprite/sns.png" usemap="#image-map" alt="SNS 서비스" />
+
+    <map id="image-map">
+      <!-- 위에 usemap과 연결해야됨-->
+      <!-- alt 에어리어 대신 설명해주는 텍스트 -->
+      <!-- coords shape - 사각형(rect), 원형(circle), 다각형(poly) -->
+      <!-- https://www.image-map.net/ 코드 만들기 참고 -->
+      <area target="_blank" alt="페이스북" href="https://www.facebook.com/" coords="15,15,14" shape="circle" />
+      <area target="_blank" alt="인스타그램" href="https://www.instagram.com/" coords="65,15,14" shape="circle" />
+      <area target="_blank" alt="유튜브" href="https://www.youtube.com/" coords="115,15,14" shape="circle" />
+    </map>
+  </body>
+</html>
