@@ -35,5 +35,74 @@
         <button type="submit">전송</button>
       </fieldset>
     </form>
+
+    <hr />
+    <h2>실습</h2>
+    <form method="post" action="https://formspree.io/f/xeqwwbwk">
+      <div>
+        <label for="search">검색어</label>
+        <input placeholder="멋쟁이사자처럼" id="search" type="search" name="search" />
+      </div>
+      <div>
+        <label for="number">전화번호</label>
+        <input placeholder="010-0000-0000" id="number" type="tel" name="number" />
+        <div>
+          <input id="HTML" type="checkbox" checked name="HTML" />
+          <label for="HTML">HTML</label>
+        </div>
+        <div>
+          <input id="CSS" type="checkbox" name="CSS" />
+          <label for="CSS">CSS</label>
+        </div>
+        <div>
+          <input id="회고 1" type="radio" checked name="회고 1" />
+          <label for="회고 1">회고 1팀</label>
+        </div>
+        <div>
+          <input id="회고 2" type="radio" name="회고 1" />
+          <label for="회고 2">회고 2팀</label>
+        </div>
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button">버튼</button>
+      </div>
+
+      <hr />
+      <h2>선생님 코드</h2>
+      <!-- search : 검색어 입력 서식 (HTML5에서 추가) -->
+      <div><label for="searchKeyword">검색어</label><input type="search" id="searchKeyword" placeholder="검색어를 입력하세요" name="keyword" /></div>
+      <!-- tel: 전화번호 입력 서식 (HTML5에서 추가) -->
+      <div><label for="userPhone">전화번호</label><input required type="tel" name="userPhone" id="userPhone" /></div>
+      <!-- checkbox : 체크박스 서식 -->
+      <div>
+        <input type="checkbox" checked value="html" name="bootcamp" id="bootcampHtml" />
+        <label for="bootcampHtml">HTML</label>
+      </div>
+      <div>
+        <input type="checkbox" value="css" name="bootcamp" id="bootcampCss" />
+        <label for="bootcampCss">CSS</label>
+      </div>
+      <!-- radio : 라디오 서식 -->
+      <div>
+        <label>
+          <!-- 암묵적인 레이블링 : 스크린리더 환경에서의 이슈떄문에 권장하진 않음. -->
+          <input type="radio" checked name="classRoom" value="classRoom1" />
+          회고 1팀
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="classRoom" value="classRoom2" />
+          회고 2팀
+        </label>
+      </div>
+      <!-- 버튼 (전속, 초기화, 일반버튼) -->
+      <div>
+        <!-- button 대신 input으로도 만들수 있음. -->
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="버튼" />
+      </div>
+    </form>
   </body>
 </html>
