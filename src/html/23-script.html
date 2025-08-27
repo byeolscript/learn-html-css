@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
     <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
     <title>script 요소</title>
-    <script src="/src/html/js/23-script.js"></script>
+    <!-- <script src="/src/html/js/23-script.js"></script> -->
     <!-- 외부 파일 연결 -->
     <script>
       //    자바스크립트 문서를 직접 삽입, 임베디드 방식
@@ -26,6 +26,20 @@
   </head>
   <body>
     <a href="/index.html">Index로 이동</a><br />
+
     <h1>script 요소</h1>
+    <!-- 실행시점을 조절하기 위해 module 사용 -->
+    <script type="module" src="/src/html/js/23-script.js"></script>
+    <!-- reset,submit  form안에서 사용 -->
+    <button type="button" class="flip-button">카드 뒤집기</button>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-face card-face-black"></div>
+        <div class="card-face card-face-white"></div>
+      </div>
+    </div>
+    <!-- <script src="/src/html/js/23-script.js"></script> -->
+    <!-- head 안에 위 내용이 들어 있으면 내용들을 읽지 않았기때문에 작동 하지 않음, 
+    위 내용들을 읽은 후에 입력되어야 실행됨 -->
   </body>
 </html>
