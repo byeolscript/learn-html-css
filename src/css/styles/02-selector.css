@@ -1,13 +1,129 @@
-/* 전체 선택자 */
+/* 어디에 정해놓고 쓰는게 아니라 상황에 따라 선택자를 꺼내씀 */
+
+/* 전체 선택자. 가중치 0*/
 * {
   font-size: 24px;
+  p {
+    color: gray;
+  }
 }
-/* 요소 선택자, (a자리에)앞에 태그의 이름을 넣어 주면 됨*/
+
+/* 요소 선택자, 가중치 1 (a자리에)앞에 태그의 이름을 넣어 주면 됨*/
+body {
+  margin: 20px;
+}
 a {
   text-decoration: none;
   color: red;
 }
-/* 클래스 선택자, 맨 앞에 '.'찍고 class이름 작성*/
+
+p {
+  border: 2px solid blue;
+  /* 함수만 중간에 ','를 찍음 */
+}
+
+/* 클래스 선택자, 가중치10 맨 앞에 '.'찍고 class이름 작성*/
 .like {
-  background-color: yellow;
+  background-color: var(--yellow);
+  border: 2px dashed green;
+}
+p {
+  color: black;
+}
+/* 원칙은 나중에 선언한게 우선하지만 
+선택자의 파워에 따라 우선 선언한걸 적용 후 
+파워에 따라 재적용 되는게 달라진다. */
+
+/* 아이디 선택자 방식,가중치 100, 아이디는 재지정이 까다롭다
+id는 id로만 재지정 됨. 되도록 id선택은 권장 하진 x */
+#lion {
+  background-color: var(--orange);
+}
+/* 클래스 선택자를 여러 개 조합하더라도 아이디 선택자의 스타일을 재지정 할 수 없다. */
+.a.b.c.d.e.f.g.h.i.j.like {
+  background-color: aqua;
+}
+
+/* 속성 선택자.요소를 같이 작성하는게 좋음 */
+a[href^='https'] {
+  color: green;
+}
+
+/* 자손 결합자.선택하려고 했던건 부트캠프 안에 p 요소를 선택. */
+.bootcamp p {
+  color: gray;
+}
+
+/* 자식 결합식.*/
+.bootcamp > blockquote > p {
+  padding: 10px;
+}
+
+/* 선택자 그룹화 */
+a,
+h1,
+#lion {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 가상 요소 선택자. 가상 콘텐츠. 
+befor,after는 content를 같이 써야함*/
+h1::before {
+  content: '멋사';
+}
+
+h1::after {
+  content: '15기';
+}
+p::before {
+  content: 'Open';
+  font-size: 36px;
+  color: red;
+}
+p::first-letter {
+  font-size: 80px;
+  font-weight: 900;
+}
+/* 글자를 드래그해서 씌우면 설정한대로 바뀜 */
+p::selection {
+  background-color: darkblue;
+  color: white;
+}
+/* 가상 클래스 */
+/* 마우스를 올리면 줄에 색깔이 칠해짐. hover는 모든 요소 사용 가능. */
+h1:hover {
+  background-color: pink;
+}
+/* 맞지 않음.
+h1:focus{
+    border: 2px dashed black;
+} */
+a:focus {
+  outline: 2px solid red;
+  outline-offset: 10px;
+}
+/* 방문하지 않은 페이지 주소는 퍼플 */
+a:link {
+  color: purple;
+}
+/* 방문한 페이지면 주소는 그레이로 변함 */
+a:visited {
+  color: gray;
+}
+/* 마우스로 포커스가 되면 글자 색이 변경
+link,visited보다 나중에 선언해야함 */
+a:hover,
+a:focus,
+a:active {
+  color: red;
+}
+
+/* 프론트엔드 안에 있는 첫번째를 찾을 거야 */
+.frontend p:first-child {
+  font-size: 16px;
+}
+/* 프론트엔드 안에 있는 두번째를 찾을 거야 */
+.frontend p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
 }
