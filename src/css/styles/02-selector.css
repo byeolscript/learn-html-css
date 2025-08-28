@@ -1,0 +1,13 @@
+/* 전체 선택자 */
+* {
+  font-size: 24px;
+}
+/* 요소 선택자, (a자리에)앞에 태그의 이름을 넣어 주면 됨*/
+a {
+  text-decoration: none;
+  color: red;
+}
+/* 클래스 선택자, 맨 앞에 '.'찍고 class이름 작성*/
+.like {
+  background-color: yellow;
+}
