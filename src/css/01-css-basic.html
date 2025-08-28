@@ -11,9 +11,26 @@
     <!-- 추후 vite 환경에 가면 /public을 생략 함 -->
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/css/styles/01-css-basic.css" />
+    <!-- 순서대로 읽어 내려가기 떄문에 어디에 배치하냐에 따라 적용 되는 색깔이 달라짐(나중에 선언한 값을 우선함) 가중치에 따라 선택 되는 순서가 달라짐.
+     body 안에 선언해도 되지만 되도록 하지마라 -->
+    <style>
+      body {
+        background-color: #fcf;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background-color: #cff">
     <a href="/index.html">Index로 이동</a><br />
     <h1>CSS 기초</h1>
+    <h2>CSS를 HTML에 적용하는 세 가지 방법</h2>
+    <h3>External Style Sheet</h3>
+    <p>CSS 파일을 별도로 생성하여 HTML 문서에 연결하는 방식으로 &lt;link&gt; 요소를 사용하는 방법과 @import 명령을 사용하는 두 가지 방식이 있습니다.</p>
+    <h3>Embedded Style Sheet</h3>
+    <!-- <haed>가 끝나기 전에 <style>을 넣는 것 -->
+    <p>별도로 CSS 파일을 생성하지 않고 HTML 파일 내에 CSS 코드를 직접 포함하여 스타일을 적용하는 방식으로 CSS 코드는 &lt;style&gt; 요소 내에 선언합니다.</p>
+    <h3>Inline Style Sheet</h3>
+    <p>특정 HTML 요소에 style 속성을 사용하여 CSS 코드를 선언하는 방법입니다.</p>
   </body>
 </html>
+<!-- style type="text/CSS" 타입을 줄 수 있다. 생략 가능 
+ inlinestyle만 본문 안에 써라(그러나 권장하진 않음)-->
