@@ -18,5 +18,50 @@ h1 {
 }
 /* html은 기본적으로 16px x 1.5 = 24px */
 .like {
-  font-size: 1.5rem;
+  font-size: 5vw;
+}
+
+/* 글꼴 스타일 */
+h1 {
+  font-style: italic;
+}
+
+/* 줄 높이 
+약 line-height30-font-size20을 뺴면 10이 되고 반으로 나눠 5px씩 위아래로 여백이 됨*/
+.wrapper blockquote {
+  font-size: 15px;
+  line-height: 1.6;
+  /* line-height 상속됨. 1.6; 권장(가장 적절한 높이)
+    값을 1(겹치지 x)로 주냐 단위(em)가 붙냐(겹침)에 따라 달라짐 */
+}
+.like {
+  font-size: 30px;
+}
+/* 자간 조정하기. 디자이너 들이 잘 사용함. */
+h1 {
+  letter-spacing: -0.02em;
+}
+
+/* 정렬 */
+.bootcamp {
+  height: 200px;
+  border: 1px solid red;
+  padding: 20px;
+  background-color: var(--yellow);
+  text-align: center;
+  line-height: 160px;
+  /* 가운데 정렬 된거 처럼 보임 */
+  /* align-content: center; - 가운데로 정렬.생긴지 얼마 안됨 */
+}
+
+/* 글자 그림자. 많이 응용될 수 있음*/
+.bootcamp {
+  text-shadow:
+    1px 1px 2px red,
+    2px 2px 2px orange,
+    3px 3px 2px yellow,
+    4px 4px 2px green,
+    5px 5px 2px blue,
+    6px 6px 2px darkblue,
+    7px 7px 2px purple;
 }
