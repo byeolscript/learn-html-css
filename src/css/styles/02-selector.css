@@ -3,9 +3,9 @@
 /* 전체 선택자. 가중치 0*/
 * {
   font-size: 24px;
-  p {
-    color: gray;
-  }
+}
+p {
+  color: gray;
 }
 
 /* 요소 선택자, 가중치 1 (a자리에)앞에 태그의 이름을 넣어 주면 됨*/
@@ -94,14 +94,10 @@ p::selection {
 h1:hover {
   background-color: pink;
 }
-/* 맞지 않음.
-h1:focus{
-    border: 2px dashed black;
-} */
-a:focus {
-  outline: 2px solid red;
-  outline-offset: 10px;
+h1:focus {
+  border: 2px dashed black;
 }
+
 /* 방문하지 않은 페이지 주소는 퍼플 */
 a:link {
   color: purple;
@@ -117,7 +113,12 @@ a:focus,
 a:active {
   color: red;
 }
-
+/* 맞지 않음.
+h1:focus{border: 2px dashed black;} */
+a:focus {
+  outline: 2px solid red;
+  outline-offset: 10px;
+}
 /* 프론트엔드 안에 있는 첫번째를 찾을 거야 */
 .frontend p:first-child {
   font-size: 16px;

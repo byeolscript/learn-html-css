@@ -1,16 +1,13 @@
 /* 본문의 기본 여백 설정 */
 body {
   margin: 20px;
+  color: gray;
 }
 
 /* 상속. 
 p요소에 직접 속성을 지정 한게 아닌데 적용이 되었다.
 왜냐면 부모에게 속성을 지정하고 그걸 상속받아 설정됨.
 상속되는 속성(꾸미기 관련)과 상속 되지 않는 속성(여백 관련)이 있다*/
-body {
-  margin: 20px;
-  color: gray;
-}
 a {
   color: inherit;
 }
@@ -27,6 +24,7 @@ important는 정적으로 사용할땐 의미가 없고 동적으로 사용할�
 body a + h1 + div#coding.wrapper p.like {
   color: blue;
 }
+
 /* 띄어쓰기 주의!!! */
 a + h1 + div#coding.wrapper p.like {
   color: red; /* !important; */
