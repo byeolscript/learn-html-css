@@ -1,0 +1,35 @@
+body {
+  margin: 20px;
+}
+
+/* CSS Nesting */
+.likelion {
+  background-color: #ffc;
+  /* 중첩자를 넣을때 빈줄을 남기는게 관례, 너무 깊게 주지 말것 많아지면
+    가독성이 떨어짐 */
+  > ul {
+    /* 자식 선택자 */
+    padding-left: 40px;
+    list-style-image: url(/src/assets/thumbnail/new.png);
+  }
+}
+ul {
+  /* 하위 선택자, 문맥 선택자 */
+  padding-left: 40px;
+
+  li {
+    margin: 10px 0;
+
+    li:first-child {
+      color: red;
+    }
+  }
+
+  .sub-last {
+    background-color: #cff;
+    &:hover {
+      background-color: darkblue;
+      color: white;
+    }
+  }
+}
