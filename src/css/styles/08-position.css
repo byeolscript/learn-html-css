@@ -1,0 +1,73 @@
+body {
+  margin: 20px;
+}
+
+.wrapper {
+  width: 500px;
+  border: 2px solid red;
+  position: relative;
+}
+/* position : relative(움직일 수 있는 상태가 됨) */
+.like {
+  background-color: #ffc;
+  position: relative; /* margin과 비슷한 결과를 만들수 있다.(position,margin둘다 사용해도 됨) margin을 쓰면 다른 속성을 넣었을때 문제를 일으킬수 있다 */
+  left: 50px;
+  bottom: 20px;
+}
+
+/* positoin : absolute(혼자 사용되지 않음) */
+.bootcamp {
+  background-color: #fcf;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+}
+
+/* position:fixed(뷰포트 기준으로 배치를 하고 싶을 때 사용) */
+.school {
+  background-color: #cff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+/* position:sticky */
+h1 {
+  background-color: #cfc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* z-index */
+.frontend,
+.euid {
+  position: relative;
+  padding: 10px;
+}
+
+.frontend {
+  background-color: yellow;
+  left: 50px;
+  top: 20px;
+  z-index: 1;
+}
+
+.euid {
+  background-color: orange;
+  z-index: auto;
+}
+
+.container {
+  background-color: #000;
+  margin: 50px;
+
+  p {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid currentColor;
+    position: relative;
+    top: -5px;
+    left: -5px;
+  }
+}
