@@ -9,7 +9,8 @@
   </head>
   <body>
     <a href="/index.html">Index로 이동</a><br /><br />
-    <!-- /src/assets/svg/chitchat.svg -->
+    <!-- 1. SVG 인라인 삽입 방식 -->
+    <!-- /src/assets/svg/chitchat.svg 파일 내용을 직접 코드로 작성-->
     <svg class="svg-img" width="50" height="50" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
       <title id="message">메세지</title>
       <defs>
@@ -34,16 +35,21 @@
     </svg>
     <hr />
     <!-- <img> 요소 사용하기 -->
-    <!-- alt (대체텍스트) : 맥락에 따라 수정 필요 img는 src,alt 필수. src는 위치 '/'사용하여 찾아줌-->
-    <!-- lazy loading - 지연로딩 (홈페이지에서 나중에 이미지를 불러옴) -->
+    <!-- alt="메세지": 대체 텍스트 (이미지 대신 스크린리더에 읽히는 설명).
+     맥락에 따라 수정 필요 img는 src,alt 필수. src는 위치 '/'사용하여 찾아줌-->
+    <!-- lazy loading - 화면에 보일 때 이미지를 불러오는 지연 로딩 기능 -->
     <img loading="lazy" src="/src/assets/svg/chitchat.svg" alt="메세지" width="50" height="50" />
     <hr />
-    <!-- figure 요소에 <img> 요소를 포함하여 마크업 -->
+    <!-- figure 요소에 <img> 요소를 포함하여 마크업 
+     대체 텍스트 (이미지 대신 스크린리더에 읽히는 설명)-->
     <figure>
+      <!-- alt="" : 장식용 이미지 처리 (의미 없는 경우 비움) -->
       <img src="/src/assets/svg/chitchat.svg" alt="" width="50" height="50" />
       <figcaption>채팅 상담</figcaption>
+      <!-- figcaption: 이미지 캡션/설명 -->
     </figure>
     <hr />
+    <!-- 또 다른 figure 예시 (class 속성은 비어있음) -->
     <figure class="">
       <img src="/src/assets/svg/chitchat.svg" alt="" width="50" height="50" />
       <figcaption>채팅상담</figcaption>
