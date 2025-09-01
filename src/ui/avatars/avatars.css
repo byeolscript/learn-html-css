@@ -13,6 +13,7 @@ body {
   width: var(--size);
   height: var(--size);
   position: relative;
+  /* 하단에 붙는 상태 표시(span) 위치를 잡기 위해 사용 */
 
   img {
     width: 100%;
@@ -20,6 +21,7 @@ body {
     border-radius: 50%;
   }
 
+  /* 온라인/오프라인 상태를 나타내는 작은 원 아이콘 */
   span {
     display: block;
     width: 28.125%;
@@ -91,6 +93,7 @@ body {
 .avatar-list {
   background-color: #ffc;
   display: flow-root;
+  /* flow-root → float 해제 효과(block formatting context 생성) */
   padding: 10px 30px;
 
   width: 400px;
@@ -101,3 +104,8 @@ body {
     margin: 10px;
   }
 }
+/* .avatar-img: 아바타를 <figure> + <img> + <span> 구조로 구현
+
+.avatar-button: 아바타를 <button> + <img> + ::after 로 구현 (접근성 활용)
+
+.avatar-list: 아바타들을 수평으로 배치 */
