@@ -45,6 +45,9 @@ body {
   background-color: transparent;
   padding: 0;
   border: 0 none;
+  vertical-align: top;
+  /* 인라인(inline) 요소나 테이블 셀(table-cell) 안의 요소를 
+  세로 방향에서 어떻게 정렬할지를 지정하는 속성  */
 
   --size: 64px;
 
@@ -81,5 +84,20 @@ body {
 
   &[aria-label='offline']::after {
     background-color: #dbdbdb;
+  }
+}
+
+/* 아바타 레이아웃 */
+.avatar-list {
+  background-color: #ffc;
+  display: flow-root;
+  padding: 10px 30px;
+
+  width: 400px;
+  border: 2px solid red;
+
+  li {
+    float: left;
+    margin: 10px;
   }
 }
