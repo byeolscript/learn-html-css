@@ -46,17 +46,16 @@ body {
   .description {
     float: right;
     width: calc(100% - 76px);
-    /* 여기서 float.with:calc로 창이 작아져도 이미지 밑으로 글자가 줄바꿈 되지 않고 네모난 상자안에 고정 됨. */
+    /* 여기서 with:calc로 창이 작아져도 이미지 밑으로 글자가 줄바꿈 되지 않고 네모난 상자안에 고정 됨. */
   }
 
-  .thumnail {
+  .thumbnail {
     float: left;
-    margin-right: 16px;
   }
 
   .description {
     margin-top: 4px;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 /* 레이아웃 */
@@ -71,21 +70,21 @@ body {
   border: 1px solid var(--gray-700);
   border-radius: 10px;
   padding: var(--spacing);
+  width: 250px;
 
   .headline {
-    background: yellow;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: var(--spacing);
   }
 
   .term {
-    margin-top: calc(var(--spacing)-4px);
+    margin-top: calc(var(--spacing) - 4px);
   }
 
   & div:nth-child(3) {
-    background: pink;
-
+    /* 제공된 HTML 코드에서 section.terms의 자식 요소는 h3, 첫 번째 div.term, 두 번째 div.term. 
+    & 상위 선택자를 가리킴.*/
     .subject,
     .description {
       float: left;
@@ -93,7 +92,6 @@ body {
 
     .thumbnail {
       float: right;
-      margin-right: 0;
     }
   }
 }
