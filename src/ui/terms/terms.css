@@ -1,0 +1,61 @@
+/* body {
+  margin: 20px;
+  width: 218px;
+  height: 88px;
+} */
+/* 컴포넌트 */
+/* .term {
+  background-color: #ffc;
+  display: flow-root;
+
+  .subject {
+    font-size: 14px;
+    font-weight: 600;
+    color: #296897;
+  }
+
+  .thumnail {
+    float: left;
+  }
+
+  .descirtion {
+    font-size: 14px;
+  }
+} */
+
+body {
+  margin: 20px;
+}
+
+.term {
+  --accent-color: #296897;
+  --text-size: 1rem;
+  /* rem단위로 놓으면 html기본 픽셀을 받는다 */
+
+  display: flow-root;
+  font-size: var(--text-size);
+  /* width: 218px; */
+
+  .subject {
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1.2em;
+  }
+
+  .subject,
+  .description {
+    float: right;
+    width: calc(100% - 76px);
+    /* 여기서 float.with:calc로 창이 작아져도 이미지 밑으로 글자가 줄바꿈 되지 않고 네모난 상자안에 고정 됨. */
+  }
+
+  .thumnail {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+}
