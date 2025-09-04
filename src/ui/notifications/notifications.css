@@ -15,7 +15,7 @@ body {
   border: 1px solid currentColor;
   color: var(--text-color);
   border-radius: 0.25rem;
-  padding: 1.25rem;
+  padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 1.25rem;
