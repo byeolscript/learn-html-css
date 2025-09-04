@@ -45,25 +45,18 @@ body {
 }
 
 /* 버튼 */
-/* .button {
-  background: red;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  font-weight: 700;
-  float: right;
-} */
-
-/* 버튼 */
 .button {
   --primary-color: var(--red-500);
   --disable-color: var(--gray-500);
   --text-color: var(--white);
 
-  font-size: 1em;
+  font-size: 12px;
   border: 0;
-  border-radius: 4px;
   padding: 8px 12px;
+
+  @media (width >= 768px) {
+    font-size: 16px;
+  }
 
   &:focus {
     outline: 2px solid green;
@@ -107,5 +100,76 @@ body {
     &:not([disabled]):active {
       color: var(--red-600);
     }
+  }
+
+  &.rounded-xs {
+    border-radius: 4px;
+  }
+
+  &.rounded-md {
+    border-radius: 12px;
+  }
+
+  &.rounded-half {
+    border-radius: 24px;
+  }
+
+  &.icon {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 8px;
+
+    svg {
+      inline-size: 16px;
+      block-size: 10px;
+    }
+  }
+}
+
+/* 입력 서식 */
+.input {
+  --primary-color: var(--red-500);
+  --text-color: var(--gray-700);
+
+  color: var(--text-color);
+  border: 1px solid currentColor;
+  padding: 12px 20px;
+  position: relative;
+
+  &:focus-within {
+    background-color: #ffc;
+
+    label {
+      color: var(--primary-color);
+      font-size: 10px;
+      translate: 0 -150%;
+    }
+  }
+
+  label {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 24px;
+    translate: 0 -50%;
+  }
+
+  input {
+    inline-size: 100%;
+    border: 0 none;
+    background: transparent;
+    outline: none;
+  }
+}
+
+.input-wrapper {
+  --primary-color: var(--red-500);
+
+  p {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-block: 4px;
+    margin-inline-start: 24px;
+    display: none;
   }
 }
