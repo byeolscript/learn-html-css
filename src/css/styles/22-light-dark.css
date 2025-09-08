@@ -3,22 +3,22 @@
 }
 
 /* light-dark함수 */
-body {
+/* body {
   margin: 20px;
   color: light-dark(var(--black), var(--gray));
   background: light-dark(var(--gray), var(--black));
-}
+} */
 
 /* prefers-color-scheme: dark */
-/* body {
+body {
   margin: 20px;
   background: var(--gray);
   color: var(--black);
 }
 
-@madia (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   body {
     background: var(--gray);
     color: var(--black);
   }
-} */
+}
