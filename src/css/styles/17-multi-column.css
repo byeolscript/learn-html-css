@@ -1,0 +1,33 @@
+body {
+  margin: 20px;
+}
+
+.container {
+  background: #ffc;
+
+  div {
+    margin-block: 20px;
+  }
+
+  .like {
+    column-width: 100px;
+    column-rule: 5px solid green;
+  }
+
+  .euid {
+    display: block;
+    background: teal;
+    color: white;
+    column-span: all;
+    padding: 0.5em 1em;
+  }
+
+  .lion {
+    column-count: 2;
+    column-rule: 10px solid red;
+  }
+  .bootcamp {
+    columns: 3 100px;
+    column-gap: 50px;
+  }
+}
