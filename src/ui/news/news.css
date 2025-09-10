@@ -20,10 +20,15 @@ body {
   color: var(--white);
   padding: 1em;
   display: grid;
-  grid-template-columns: 3fr auto;
-  grid-template-rows: auto;
-  grid-auto-rows: auto; /* 생략가능 */
+  grid-template-columns: minmax(200px, 1fr) max-content;
+  grid-auto-rows: auto;
   gap: 8px;
+
+  .news-title,
+  a,
+  time {
+    padding: 0.5em;
+  }
 
   .news-list,
   .news-item {
@@ -42,7 +47,60 @@ body {
   }
 
   .more {
-    grid-area: 1/2;
+    grid-area: 1 / 2;
     justify-self: end;
+  }
+}
+
+/* 이디야 공지사항 */
+.notice {
+  display: grid;
+  grid-template-columns: 125px minmax(150px, 1fr);
+  border: 1px solid var(--gray-dark);
+
+  .notice-title,
+  .notice-buttons {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .notice-title {
+    padding: 16px 0 16px 16px;
+    background: radial-gradient(circle at left top, var(--start-color), var(--end-color));
+    color: var(--white);
+    font-size: 20px;
+  }
+
+  .notice-content {
+    background: var(--white);
+    padding: 16px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    time {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    p {
+      margin-block-start: 16px;
+    }
+  }
+
+  .notice-buttons {
+    /* justify-self: end;
+    align-self: end; */
+    place-self: end;
+    margin: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    button {
+      border: 0 none;
+      background: transparent;
+      padding: 0;
+    }
   }
 }
